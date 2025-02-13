@@ -28,7 +28,9 @@
       }
 
       const showTotal=()=>{
-        let total=products.reduce(()=>sum+(value.price*cart[value.id])
+        let total=products.reduce(
+          (sum,value)=>sum+ value.price*cart[value.id];
+
         ,0);
         divTotal.innerHTML="Order Value";
       };
